@@ -23,15 +23,11 @@
       Es 0
     </span>
 
-    <span v-show="changePercent>0">
-      Mayor a 0
-    </span>
-    <span v-show="changePercent<0">
-      Menor a 0
-    </span>
-    <span v-show="changePercent==0">
-      Es 0
-    </span>
+    <ul>
+      <li v-for="(p, i) in pricesWithDays" :key="p.day">
+        {{p.day}} - {{p.value}}
+      </li>
+    </ul>
 
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
