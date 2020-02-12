@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,34 @@
   <title>Curso Basico de Vue.js | Platzi</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
   <div id="app">
     <h1>{{name}}</h1>
     <img v-bind:src="img" v-bind:alt="name">
+    <span v-if="changePercent>0">
+      Mayor a 0
+    </span>
+    <span v-else-if="changePercent<0">
+      Menor a 0
+    </span>
+    <span v-else>
+      Es 0
+    </span>
+
+    <span v-show="changePercent>0">
+      Mayor a 0
+    </span>
+    <span v-show="changePercent<0">
+      Menor a 0
+    </span>
+    <span v-show="changePercent==0">
+      Es 0
+    </span>
+
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="app.js"></script>
 </body>
+
 </html>
