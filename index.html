@@ -11,7 +11,7 @@
 
 <body>
   <div id="app" v-bind:style="{ background: '#'+color }">
-    <h1 v-bind:class="showPrices? 'red' : 'green'">{{name}}</h1>
+    <h1 v-bind:class="showPrices? 'red' : 'green'">{{ title}}</h1>
     <img v-bind:src="img" v-bind:alt="name" v-on:mouseover="toggleShowPrices" v-on:mouseout="toggleShowPrices">
     <span v-if="changePercent>0">
       Mayor a 0
@@ -23,7 +23,7 @@
       Es 0
     </span>
     <p v-on:click="toggleShowPrices">
-      {{ showPrices ? 'Ocultar' : 'Ver'}} {{Lista}}
+      {{ showPrices ? 'Ocultar' : 'Ver'}} Lista
     </p>
 
     <ul v-show="showPrices">
