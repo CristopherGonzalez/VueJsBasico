@@ -3,6 +3,7 @@
   flex-direction: column;
   padding: 20px;
   min-height: 800px;
+  margin: 0;
 }
 
 .green {

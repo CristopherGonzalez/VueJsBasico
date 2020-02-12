@@ -15,12 +15,14 @@ new Vue({
         {day : "Domingo", value: 9600 }
       ],
       showPrices : false,
-      actualPrice : 8500
+      actualPrice : 8500,
+      color: 'f4f4f4'
     }
   },
   methods: {
     toggleShowPrices(){
       this.showPrices = !this.showPrices;
+      this.color = this.color.split('').reverse().join('');
     }
   },
 });
