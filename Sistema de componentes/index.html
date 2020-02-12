@@ -11,8 +11,9 @@
 
 <body>
   <div id="app" v-bind:style="{ background: '#'+color }">
-    <coin-detail v-bind:coin="btc">
-    </coin-detail>
+    <coin-detail v-bind:coin="btc" v-on:change-color="updateColor"></coin-detail>
+    <coin-detail v-bind:coin="btc" v-on:change-color="updateColor"></coin-detail>
+    <coin-detail v-bind:coin="btc" v-on:change-color="updateColor"></coin-detail>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="app.js"></script>
