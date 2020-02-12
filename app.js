@@ -17,7 +17,8 @@ new Vue({
       ],
       showPrices: false,
       actualPrice: 8500,
-      color: 'f4f4f4'
+      color: 'f4f4f4',
+      value: 0
     }
   },
   methods: {
@@ -29,6 +30,10 @@ new Vue({
   computed: {
     title(){
       return `${this.name} - ${this.symbol}`
+    },
+    convertedValue(){
+      if(!this.value) return 0
+      return this.value / this.actualPrice
     }
   },
   watch: {
