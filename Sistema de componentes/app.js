@@ -51,6 +51,8 @@ Vue.component('CoinDetail', {
       {{i+1}} {{p.day}} - {{p.value}}
     </li>
   </ul>
+  <slot name="content"></slot>
+  <slot name="link"></slot>
   </div>
   `
 })

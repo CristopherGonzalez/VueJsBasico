@@ -11,7 +11,19 @@
 
 <body>
   <div id="app" v-bind:style="{ background: '#'+color }">
-    <coin-detail v-bind:coin="btc" v-on:change-color="updateColor"></coin-detail>
+    <coin-detail v-bind:coin="btc" v-on:change-color="updateColor">
+      <template slot="content">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore ex, quos est laudantium vel autem natus a
+          vitae atque corrupti quod consectetur ipsa magni dolorem laborum repudiandae maiores facere maxime.
+        </p>
+      </template>
+      <template slot="link">
+        <p>
+          link que no es link
+        </p>
+      </template>
+    </coin-detail>
     <coin-detail v-bind:coin="btc" v-on:change-color="updateColor"></coin-detail>
     <coin-detail v-bind:coin="btc" v-on:change-color="updateColor"></coin-detail>
   </div>
